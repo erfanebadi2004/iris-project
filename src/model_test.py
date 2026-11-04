@@ -12,3 +12,12 @@ def test_prediction_model():
     response = client.post("/predict", json=payload)
     
     assert response.status_code == 200
+    
+def test_predict_invalid_input():
+    payload = {"sample": [
+            {"sepal_length":2.7, "sepal_width": 4.9}
+        ]}
+    
+    response = client.post("/predict", json=payload)
+    
+    assert response.status_code == 422
