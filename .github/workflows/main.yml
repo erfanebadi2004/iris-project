@@ -28,4 +28,4 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t ml-iris:latest .
+          docker build -f src/Dockerfile -t ml-iris:latest src/
