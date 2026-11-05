@@ -7,3 +7,4 @@ pydantic
 uvicorn
 python-dotenv
 pytest
+httpx2
